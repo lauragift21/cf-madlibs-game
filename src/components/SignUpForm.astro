@@ -1,0 +1,87 @@
+<form class='signup-form'>
+  <label for='name'> Enter Your Name</label>
+  <input type='text' id='name' name='name' required />
+
+  <label for='email'> Enter Your Email</label>
+  <input type='email' id='email' name='email' required />
+
+  <button type='submit'>Start Playing</button>
+</form>
+
+<style>
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  label {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    width: 80%;
+    color: white;
+    background: #333;
+    font-size: 1.5rem;
+  }
+
+  button {
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    border: none;
+    border-top: 3px solid rgba(var(--accent-light), 65%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    animation: wiggle 2s linear 2s;
+    transform-origin: 50% 5em;
+  }
+
+  button:hover {
+    background-color: rgb(var(--accent-light));
+  }
+
+  /* Keyframes */
+  @keyframes wiggle {
+    0%,
+    7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+      transform: rotateZ(0);
+    }
+  }
+</style>
