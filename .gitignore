@@ -3,6 +3,7 @@ dist/
 
 # generated types
 .astro/
+.wrangler/
 
 # dependencies
 node_modules/
@@ -19,3 +20,5 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+drizzle/

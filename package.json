@@ -8,14 +8,20 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "pages:dev": "wrangler pages dev --compatibility-date=2023-10-25 -- astro dev",
-    "pages:deploy": "astro build && wrangler pages deploy ./dist"
+    "pages:dev": "wrangler pages dev --compatibility-date=2023-10-25 --d1=DB -- astro dev",
+    "pages:deploy": "astro build && wrangler pages deploy ./dist",
+    "generate": "drizzle-kit generate:sqlite --schema=src/db/schema.ts",
+    "up": "drizzle-kit up:sqlite --schema=src/db/schema.ts"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^7.6.3",
-    "astro": "^3.0.13"
+    "astro": "^3.0.13",
+    "better-sqlite3": "^9.0.0",
+    "drizzle-kit": "^0.19.13",
+    "drizzle-orm": "^0.28.6"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.6",
     "wrangler": "^3.15.0"
   }
 }
