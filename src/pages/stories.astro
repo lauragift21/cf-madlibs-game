@@ -1,30 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Form from '../components/SignUpForm.astro';
-
-console.log(JSON.stringify(Astro.locals.runtime.env, null, 2));
+import StoryPicker from '../components/StoryPicker.astro';
 ---
 
 <Layout title='Cloudflare MadLibs Game'>
   <main>
     <h1>Cloudy<span class='text-gradient'> MadLibs Game</span></h1>
+    <!-- TODO: Add Player's name from DB! -->
+    <p>Hello, Player_Name!</p>
     <p class='instructions'>
-      Are you ready to put your creativity to the test and have a blast while
-      doing it?
-      <br />
-      <strong>
-        This zany game invites players to embark on a linguistic journey filled
-        with laughter, imagination, and Cloudflare's unique charm.</strong
-      >
+      Choose a story you will like to play, you'll be prompted to fill out a
+      form below with the appropriate parts of speech. Once you've completed the
+      form, click the <strong>Generate Story</strong>
+       button to see your story come to life!
     </p>
-    <!-- TODO: Allow participants to register with their names and email -->
-    <Form />
-    <footer>
-      <p class='footer'>
-        Built with ❤️ on <a href='https://developers.cloudflare.com/workers'
-          >Cloudflare Workers</a>
-      </p>
-    </footer>
+    <StoryPicker />
   </main>
 </Layout>
 

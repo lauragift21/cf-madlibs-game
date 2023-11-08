@@ -10,8 +10,7 @@
     "astro": "astro",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-10-25 --d1=DB -- astro dev",
     "pages:deploy": "astro build && wrangler pages deploy ./dist",
-    "generate": "drizzle-kit generate:sqlite --schema=src/db/schema.ts",
-    "up": "drizzle-kit up:sqlite --schema=src/db/schema.ts"
+    "generate": "drizzle-kit generate:sqlite --schema=src/db/schema.ts --out=./migrations"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^7.6.3",
