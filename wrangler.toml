@@ -1,8 +1,9 @@
 name = "astro_ssr"
 main = "./dist/_worker.js"
 compatibility_date = "2023-06-15"
+node_compat = true
 
 [[d1_databases]]
-binding = "DB" # i.e. available in your Worker on env.DB
+binding = "DB"
 database_name = "madlibs-db"
 database_id = "5c61ceec-f7ae-4f66-9272-efb7894f5171"

@@ -1,87 +1,26 @@
 ---
+import { stories } from '../pages/api/stories.js';
 export interface Story {
   id: string;
   title: string;
   description: string;
 }
 
-// TODO: Fetch these data from another file
-const stories = [
-  {
-    id: 'fullstack',
-    title: 'Fullstack for the Win',
-    description:
-      'When the software layers unite, a new hero rises in the world of code.',
-  },
-  {
-    id: 'datacenter',
-    title: 'A Mystery at the Data Center',
-    description:
-      'Silent servers and flickering lights, can you solve the data center’s nightly frights?',
-  },
-  {
-    id: 'ai',
-    title: 'AI for Animals',
-    description:
-      'In a twist of fate, the animal kingdom gets a digital mind to find the ultimate cheese.',
-  },
-  {
-    id: 'object-storage',
-    title: 'The Mandalorian’s Object Quest',
-    description:
-      'A lone ranger traverses the binary dunes in search of the galaxy’s lost objects.',
-  },
-  {
-    id: 'cyber',
-    title: 'Swiftly Stopping Cyber Attacks',
-    description:
-      'Cyber warriors gear up in a race against time to thwart a digital apocalypse.',
-  },
-  {
-    id: 'to-the-moon',
-    title: 'To the Moon',
-    description:
-      'Buckle up for an interstellar sprint to the moon where cryptic treasures await.',
-  },
-  {
-    id: 'ddos',
-    title: 'The History of DDoS Attacks',
-    description:
-      'Delve into the digital battleground where bytes become shields against nefarious network sieges.',
-  },
-  {
-    id: 'firewall',
-    title: 'My Kingdom for a Firewall',
-    description:
-      'Within the walls of silicon, a sovereign’s plea for a firewall ignites an epic cyber crusade.',
-  },
-  {
-    id: 'cdn',
-    title: 'The CDN Chronicles',
-    description:
-      'Journey across the distributed realms where content delivery is both art and war.',
-  },
-  {
-    id: 'pacman',
-    title: 'The Ultimate Game of Pac-Man',
-    description:
-      'Chomp through a labyrinthine odyssey where ghosts lurk and power-pellets decide fates.',
-  },
-];
-
-export function selectStory(storyId: string): void {
-  const url = new URL(window.location.href);
-  url.searchParams.set('story', storyId);
-  window.location.href = url.toString();
-}
-
 function getColor(index: number) {
   const colors = [
-    '#007bff', '#6610f2', '#6f42c1', '#e83e8c',
-      '#dc3545', '#fd7e14', '#ffc107', '#28a745',
-      '#20c997', '#17a2b8', '#343a40'
+    '#007bff',
+    '#6610f2',
+    '#6f42c1',
+    '#e83e8c',
+    '#dc3545',
+    '#fd7e14',
+    '#ffc107',
+    '#28a745',
+    '#20c997',
+    '#17a2b8',
+    '#343a40',
   ];
-  return colors[index % colors.length]; 
+  return colors[index % colors.length];
 }
 
 ---
@@ -90,18 +29,38 @@ function getColor(index: number) {
   <div class='story-grid'>
     {
       stories.map((story, index) => (
-        <button
+        <a
           class='story-card'
+          href={`/stories/${story.id}`}
           data-story-id={story.id}
-          onclick='selectStory(this.dataset.storyId)'
           style={`background-color: ${getColor(index)};`}>
-          <h3>{story.title}</h3>
-          <p>{story.description}</p>
-        </button>
+            <h3>{story.title}</h3>
+            <p>{story.description}</p>
+        </a>
       ))
     }
   </div>
 </section>
+
+<script type="module">
+
+  function navigateToStory(storyId: string | null) {
+    window.open(`/stories/${storyId}`);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const storyGrid = document.querySelector('.story-grid');
+    if (storyGrid) {
+      storyGrid.addEventListener('click', (event) => {
+        const storyCard = (event.target as Element).closest('.story-card');
+        if (storyCard) {
+          const storyId = storyCard.getAttribute('data-story-id');
+          navigateToStory(storyId);
+        }
+      });
+    }
+  });
+</script>
 
 <style>
   .story-grid {
@@ -112,6 +71,7 @@ function getColor(index: number) {
   }
 
   .story-card {
+    text-decoration: none;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 1rem;
@@ -121,7 +81,7 @@ function getColor(index: number) {
     color: #fff;
     border: none;
     margin: 0;
-    font-size: .8em;
+    font-size: 0.8em;
     overflow: visible;
     text-transform: none;
     -webkit-appearance: button;

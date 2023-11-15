@@ -1,18 +1,27 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import StoryPicker from '../components/StoryPicker.astro';
-import GameInstructions from '../components/GameInstructions.astro';
+import GameInstructions from '../../components/GameInstructions.astro';
+import Layout from '../../layouts/Layout.astro';
+import { stories } from '../api/stories.js';
+const id = Astro.params.id;
+const story = stories.find((story) => story.id === id);
 ---
 
 <Layout title='Cloudflare MadLibs Game'>
   <main>
     <h1>Cloudy<span class='text-gradient'> MadLibs Game</span></h1>
-    <!-- TODO: Add Player's name from DB! -->
-    <p>Hello, Player_Name!</p>
+    <!-- TODO: Use the bgcolor of a specific story -->
+    <h2 class='story-title'>{story?.title}</h2>
     <GameInstructions />
-    <StoryPicker />
+    <div id="story-container"></div>
   </main>
 </Layout>
+
+<script type="module">
+  //TODO: Return placeholders as text inputs and a submit button
+  
+
+
+</script>
 
 <style>
   main {
@@ -24,6 +33,21 @@ import GameInstructions from '../components/GameInstructions.astro';
     font-size: 20px;
     line-height: 1.6;
   }
+
+  .story-title {
+    text-align: center;
+    font-size: 2.5em;
+  }
+
+  .submit {
+    padding: 1em 0.5em;
+    background-color: rgb(var(--accent-dark));
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    color: #fff;
+  }
+
   .astro-a {
     position: absolute;
     top: -32px;

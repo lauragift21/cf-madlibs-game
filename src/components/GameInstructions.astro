@@ -1,7 +1,6 @@
 <section>
-  <h2>How to Play the Game</h2>
-  <p>
-    Choose a story you will like to play, then click the <strong>Play button</strong>
+  <p class="instructions">
+    Choose a story you will like to play,
     you'll be prompted to simply fill out the form below with the appropriate parts of
     speech.
     <br />
@@ -9,3 +8,27 @@
     button to see your story come to life!
   </p>
 </section>
+
+<style>
+   .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+   .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+</style>
