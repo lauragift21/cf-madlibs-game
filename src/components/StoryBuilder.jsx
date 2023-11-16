@@ -26,8 +26,8 @@ const StoryBuilder = ({ story }) => {
     let filledStory = story.content;
 
     placeholders.forEach((placeholder, index) => {
-      const replacement = inputValues[index] || 'Empty Text Field';
-      filledStory = filledStory.replace(placeholder, `<span class="${styles.highlight}">${replacement}</span>`);      
+      const replacement = inputValues[index] || 'Missing Text';
+      filledStory = filledStory.replace(placeholder, `<span style="color:${story.color}" class="${styles.highlight}">${replacement}</span>`);      
     });
     setCompletedStory(filledStory);
   };

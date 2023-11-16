@@ -94,8 +94,15 @@ button {
   text-decoration: none;
 }
 
+.completedStory {
+  line-height: 2em;
+}
+
 .highlight {
+  background-color: #fff;
   text-decoration: underline;
-  font-weight: 600;
-  color: #222;
+  text-transform: capitalize;
+  font-weight: 500;
+  padding: 10px 8px;
+  margin-top: 20px;
 }
