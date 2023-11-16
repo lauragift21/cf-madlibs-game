@@ -9,10 +9,9 @@ const story = stories.find((story) => story.id === id);
 <Layout title='Cloudflare MadLibs Game'>
   <main>
     <h1>Cloudy<span class='text-gradient'> MadLibs Game</span></h1>
-    <!-- TODO: Use the bgcolor of a specific story -->
     <h2 class='story-title'>{story?.title}</h2>
     <p>{story?.description}</p>
-    <StoryBuilder story={story} />
+    <StoryBuilder story={story} client:load/>
     <div id="story-container"></div>
   </main>
 </Layout>

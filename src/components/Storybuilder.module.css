@@ -1,6 +1,7 @@
 form {
   max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 20px;
   padding: 10px 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -20,8 +21,7 @@ form input[type="text"] {
 }
 
 form input[type="text"]:focus {
-  outline: none;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  border: 0;
 }
 
 button {
@@ -32,6 +32,7 @@ button {
   color: white;
   font-size: .8em;
   cursor: pointer;
+  font-weight: 700;
   transition: background-color 0.3s ease;
 }
 
@@ -40,6 +41,18 @@ button {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin: 20px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
 }
 
 .gridContainer input[type="text"] {
@@ -62,7 +75,7 @@ button {
 
 .backButton {
   padding: 10px 25px;
-  margin: 5px;
+  margin-top: 10px;
   background-color:#333;
   color: white;
   text-align: center;
@@ -79,4 +92,10 @@ button {
   background-color: #222;
   color: #fff;
   text-decoration: none;
+}
+
+.highlight {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #222;
 }
