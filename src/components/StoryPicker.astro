@@ -5,24 +5,6 @@ export interface Story {
   title: string;
   description: string;
 }
-
-function getColor(index: number) {
-  const colors = [
-    '#007bff',
-    '#6610f2',
-    '#6f42c1',
-    '#e83e8c',
-    '#dc3545',
-    '#fd7e14',
-    '#ffc107',
-    '#28a745',
-    '#20c997',
-    '#17a2b8',
-    '#343a40',
-  ];
-  return colors[index % colors.length];
-}
-
 ---
 
 <section>
@@ -33,7 +15,7 @@ function getColor(index: number) {
           class='story-card'
           href={`/stories/${story.id}`}
           data-story-id={story.id}
-          style={`background-color: ${getColor(index)};`}>
+          style={`background-color: ${story.color};`}>
             <h3>{story.title}</h3>
             <p>{story.description}</p>
         </a>

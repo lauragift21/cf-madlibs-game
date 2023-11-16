@@ -4,6 +4,7 @@ export const stories = [
     title: 'Fullstack for the Win',
     description:
       'When the software layers unite, a new hero rises in the world of code.',
+    color: '#007bff',
     content: `After attending re:Invent, a group of [adjective] developers decided to build a full-stack serverless application with Cloudflare. Their goal was to create a(n) [adjective] application that would [verb] people's lives.
 For the front-end, they chose to use [front-end framework] running on Pages because of its [adjective] ability to create beautiful and [adjective] user interfaces. They wanted the user experience to be [adjective] and [adjective] to ensure that users would keep coming back for more. The team even added some [color] elements to make the design pop.
 Next, for object storage, they decided to go with R2 because of its [adjective] serverless capabilities. This choice allowed them to focus on [noun], rather than worrying about high egress fees. They used D1 for their database, ensuring that their data was [adjective] and [adjective].
@@ -17,6 +18,7 @@ And so, the story of building a full-stack serverless application serves as a(n)
     title: 'A Mystery at the Data Center',
     description:
       'Silent servers and flickering lights, can you solve the data center’s nightly frights?',
+    color: '#6610f2',
     content: `Late one night, I got an [urgent] message about an outage at one of our data centers. Being the [adjective] employee that I am, I hopped in my [form of transportation] and drove over to see what was wrong.
 
 The moment I [past tense verb] into the data center, I could tell something was terribly [adjective]. There were [adjective] [noun] all over the walls, and the whole area smelled [adjective]. As I walked further in, something [past tense verb] in the shadows. And a mournful [sound] echoed from somewhere in the server racks.
@@ -31,6 +33,7 @@ Fortunately, the story has a [adjective] ending. I fixed the router [adverb]. My
     title: 'AI for Animals',
     description:
       'In a twist of fate, the animal kingdom gets a digital mind to find the ultimate cheese.',
+    color: '#6f42c1',
     content: `Now that we’ve mastered language translation with AI a group of [adjective] developers have set their sights on an [adjective] next step: human to [animal] translation. Have you ever wondered what your pet was thinking? Well your questions will soon be answered. 
 
 What started out as a lark over [beverage] during re:Invent [adverb] turned into a ground-breaking discovery. After [number] months of work the m2m100 model was retrained to recognize animal sounds and translate them to any language. 
@@ -49,6 +52,7 @@ The communication gap between humans and their [adjective] friends is now a thin
     title: 'The Mandalorian’s Object Quest',
     description:
       'A lone ranger traverses the binary dunes in search of the galaxy’s lost objects.',
+    color: '#e83e8c',
     content: `In a galaxy not so far away, the fearless Mandalorian, [Mandalorian's Name], embarked on a daring mission to retrieve crucial data from the heart of the Empire's highly [Adjective] object storage. Armed with nothing but his trusty [Dev tool], he set out on his [Adjective] speeder [mode of transportation].
 As he approached the Imperial facility, he relied on his [Noun] to bypass security measures. The data was protected by a series of [Adjective] firewalls and guarded by [Number] stormtroopers. The Mandalorian knew he had to act fast, so he skillfully [Verb] his way through the defenses.
 Inside, he found the coveted data, stored in a [noun]. He quickly loaded the precious cargo into his [Vehicle] and began his [adjective] escape. The Empire was hot on his heels, and he had to [Verb] through the treacherous terrain to evade capture.
@@ -61,6 +65,7 @@ This Mandalorian-themed adventure proves that even in the world of object storag
     title: 'Swiftly Stopping Cyber Attacks',
     description:
       'Cyber warriors gear up in a race against time to thwart a digital apocalypse.',
+    color: '#dc3545',
     content: `In a not-so-distant future, the world had become highly interconnected with a connectivity cloud. Taylor Swift, the legendary pop sensation, had reinvented herself as a tech-savvy cyber heroine. Her latest hit, "[Song Title]," was a sensation in the metaverse.
 One day, as Taylor was preparing for a groundbreaking virtual concert that would unite fans across the globe in the world's largest virtual stadium, a sinister group of hackers known as [ Band name] launched a devastating DDoS attack on the concert server.
 Taylor Swift, determined not to let her fans down, sprang into action. She contacted Cloudflare, who was armed with [Number] global locations and a vast array of cyber-weapons to defend against attacks. Together, they embarked on a virtual journey through the depths of the digital realm.
@@ -74,29 +79,66 @@ The world had been saved once again, thanks to the combined forces of Taylor Swi
     title: 'To the Moon',
     description:
       'Buckle up for an interstellar sprint to the moon where cryptic treasures await.',
+    color: '#fd7e14',
+    content: `[Company name] is  kicking remote work up a notch with the ability to work from the moon.  Achieving this was no [adjective] feat. To ensure the security of remote access for these lunar workers, the company implemented a cutting-edge Zero Trust security protocol from Cloudflare.
+To secure remote access, the company utilized a state-of-the-art [Adjective] authentication system. Each employee had to pass a rigorous biometric scan, which included [Adjective] retina scans, [Adjective] fingerprint recognition, and even [Adjective] voice analysis to gain access to the base's computer systems.
+In addition to biometrics, employees were required to use a [Adjective] passphrase, which was [Adjective] to guess. This passphrase was generated by a [Noun]-level random number generator and changed every [Number] hours. To make things even more secure, employees had to solve a [Noun]-based puzzle before entering their passphrase, ensuring that only the most [Adjective] minds could access the lunar base's systems.
+But the security measures didn't stop there. To protect against potential [Noun] attacks, the company had deployed a swarm of [Adjective] security drones that patrolled the lunar surface. These drones were equipped with [Number] different types of sensors, including [Adjective] lasers and [Noun]-detection systems, making them capable of detecting even the tiniest of threats.
+As a final layer of security, the lunar base's mainframe computer was [Verb] in a [Adjective] vault deep beneath the moon's surface. Access to this vault was granted only to a select few employees who possessed [Noun]-level security clearance and underwent [Adjective] background checks.
+Cloudflare’s ability to simplify branch connectivity, even when one of those branches is located on the moon gave "[Company Name]"  peace of mind, knowing that their remote access was [Adjective] and their valuable projects were protected from any potential [Noun] or cyber threats.
+`
   },
   {
     id: 'ddos',
     title: 'The History of DDoS Attacks',
     description:
       'Delve into the digital battleground where bytes become shields against nefarious network sieges.',
+    color: '#ffc107',
+    content: `In the year 2123, DDoS attacks are no longer occurring, you can only learn about them in history books. This utopian future was made possible by Cloudflare’s, [adjective] technology that had revolutionized the way we protect our digital world.
+In this [adjective] era, cybercriminals had been thwarted by [noun], an AI-driven system that could [verb] and [verb] any potential threats before they could do any harm. This system used [noun] to [verb] cyberattacks in their tracks, making them as obsolete as [noun].
+With DDoS attacks no longer a concern, the internet had become a [adjective] and [adjective] place for all. People from [place] to [place] could [verb] the web without fear of [noun]. Online businesses thrived, and the global economy was more [adjective] than ever.
+In this digital paradise, even the most [adjective] individuals were free to [verb] without worrying about [noun]. Social media had transformed into a platform for [noun], where people [verb] their ideas and [verb] with others in a spirit of [noun]. With cyberspace now secure there was now limitless possibilities for the digital future. 
+`
   },
   {
     id: 'firewall',
     title: 'My Kingdom for a Firewall',
     description:
       'Within the walls of silicon, a sovereign’s plea for a firewall ignites an epic cyber crusade.',
+    color: '#28a745',
+    content: `In the kingdom of [Software Name], the castle's cybersecurity was protected by a [adjective] and [adjective] firewall. For years, it had stood as a mighty [noun] guarding against the forces of the cyber realm. It was said to be impenetrable, a formidable defense against all threats.
+But one dark and [adjective] night, a shadowy group of hackers, known as the [Hacker Clan Name], hatched a devious plan to breach the fortress of the firewall. Their leader, [ Name], was a master of [noun] and [adjective] subterfuge.
+Under the cover of [adjective] darkness, the hackers launched their attack. They used their [adjective] knowledge of [noun] to exploit a vulnerability in the castle's digital defenses. The breach was a [noun] and [noun] endeavor, but they were determined to [verb] the mighty firewall.
+As the breach unfolded, it was as if the [noun] themselves conspired to aid the hackers. The firewall's defenses were slowly [verb] by the relentless assault. The battle between the hackers and the firewall was like a [noun] of epic proportions, with sparks of [color] flying through the digital realm.
+In a climactic moment, the hackers successfully breached the firewall, gaining access to the kingdom's most [adjective] secrets. It was a victory that would send shockwaves throughout the land, for the castle's [noun] had been compromised, and the realm's future hung in the balance.
+The breach of the mighty firewall marked a turning point in the ongoing battle for digital supremacy in the kingdom of [Kingdom Name]. The [Hacker Clan Name] had emerged victorious, and the world of cybersecurity would never be the same.
+`
   },
   {
     id: 'cdn',
     title: 'The CDN Chronicles',
     description:
       'Journey across the distributed realms where content delivery is both art and war.',
+    color: '#20c997',
+    content: `After spending the week at re:Invent I was in need of a beach vacation. With my toes in the [noun], I gazed at the [noun], and in that moment, I felt completely [adjective] and [adjective]. It was the perfect time for a little beachside reading.
+As I opened my [noun] written by Cloudflare and started to [verb] through the pages, I stumbled upon an article about Content Delivery Networks (CDNs). The story told of CDNs as the unsung heroes of the Internet, quietly [verb] web content to users all around the world.
+The article described CDNs as the [noun] of the internet, speeding up websites, and making the digital world a [adjective] place for all. I couldn't help but be drawn into the world of CDNs, imagining them as [noun] in a race against time to deliver content faster than a [noun] rolling towards the shore.
+I learned about CDNs [adverb] [verb] websites, [adjective] images, and ensuring that users could enjoy a [adjective] and [adjective] online experience, no matter where they were. It was like they had a [noun] to make the internet a better place, one [noun] at a time.
+With the gentle [noun] and the sound of [noun] in the background, I continued to read about CDNs, realizing that they were the [noun] of the digital world. It was a [adjective] revelation, and I couldn't help but appreciate the role they played in making the Internet a [adjective] place.
+`
+
   },
   {
     id: 'pacman',
     title: 'The Ultimate Game of Pac-Man',
     description:
       'Chomp through a labyrinthine odyssey where ghosts lurk and power-pellets decide fates.',
+    color: '#17a2b8',
+    content: `Pac-Man, was tired of being constrained to a video game, and decided to embark on a(n) [adjective] journey through the digital maze. He was on a quest to find the legendary [noun], which was rumored to hold the key to mastering Internet routing.
+Pac-Man had a trusty sidekick, [name], by his side. [Name] was a(n) [adjective] and [adjective] network admin, known for their incredible skills in [verb ending in -ing]. Together, they navigated through the labyrinthine tunnels of cyberspace, where each [noun] and [noun] posed a unique challenge.
+Pac-Man's appetite for knowledge was insatiable. He devoured packets of data like a [noun], munching on [plural noun] of information while being chased by [number] ghostly BOTs. These pesky ghosts represented the ever-elusive [noun], which constantly tried to thwart Pac-Man's mission with DDoS attacks.
+As Pac-Man and [name] continued their journey, they encountered an [adjective] old sysadmin, who revealed the secrets of Internet routing. They explained that Internet routing was like a giant [noun], where [noun] and [noun] were the decisions that determined the path data packets took. To master this digital maze, Pac-Man needed to [verb] through the packets and choose the optimal route.
+With newfound knowledge, Pac-Man and [name] continued their adventure. They strategically [verb ending in -ed] their way through the Internet maze, avoiding bottlenecks and ensuring smooth data flow. 
+In the end, Pac-Man, gained ultimate mastery over Internet routing. With this newfound power, he ensured a smooth and efficient flow of data throughout the Internet, making it a better place for everyone.`
   },
 ];

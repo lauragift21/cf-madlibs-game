@@ -14,10 +14,15 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^7.6.3",
+    "@astrojs/react": "^3.0.4",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
     "astro": "^3.0.13",
     "better-sqlite3": "^9.0.0",
     "drizzle-kit": "^0.19.13",
-    "drizzle-orm": "^0.28.6"
+    "drizzle-orm": "^0.28.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.6",

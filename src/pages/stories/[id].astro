@@ -1,5 +1,5 @@
 ---
-import GameInstructions from '../../components/GameInstructions.astro';
+import StoryBuilder from '../../components/StoryBuilder.jsx'
 import Layout from '../../layouts/Layout.astro';
 import { stories } from '../api/stories.js';
 const id = Astro.params.id;
@@ -11,32 +11,29 @@ const story = stories.find((story) => story.id === id);
     <h1>Cloudy<span class='text-gradient'> MadLibs Game</span></h1>
     <!-- TODO: Use the bgcolor of a specific story -->
     <h2 class='story-title'>{story?.title}</h2>
-    <GameInstructions />
+    <p>{story?.description}</p>
+    <StoryBuilder story={story} />
     <div id="story-container"></div>
   </main>
 </Layout>
 
-<script type="module">
-  //TODO: Return placeholders as text inputs and a submit button
-  
-
-
-</script>
 
 <style>
   main {
     margin: auto;
     padding: 1rem;
-    width: 800px;
+    width: 1200px;
     max-width: calc(100% - 2rem);
     color: white;
     font-size: 20px;
     line-height: 1.6;
+    text-align: center;
   }
 
   .story-title {
     text-align: center;
-    font-size: 2.5em;
+    margin-bottom: -0.5em;
+    font-size: 2em;
   }
 
   .submit {
