@@ -75,7 +75,7 @@ button {
 
 .backButton {
   padding: 10px 25px;
-  margin-top: 10px;
+  margin: 10px;
   background-color:#333;
   color: white;
   text-align: center;
@@ -105,4 +105,17 @@ button {
   font-weight: 500;
   padding: 10px 8px;
   margin-top: 20px;
+}
+
+.shareButton {
+  padding: 10px 25px;
+  margin: 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
