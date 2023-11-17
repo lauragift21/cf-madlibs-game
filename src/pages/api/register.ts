@@ -21,7 +21,7 @@ export const POST: APIRoute<Env> = async ({request, locals}: APIContext) => {
     const stmt = await DB.prepare(
       `INSERT INTO players (name, email) VALUES (?, ?)`
     );
-    const {result} = (await stmt.bind(name, email).all()).meta;
+    const result = (await stmt.bind(name, email).run()).meta;
     console.log('Insert result:', result);
 
     return Response.redirect(`${CF_PAGES_URL}/stories`, 301);
