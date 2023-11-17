@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS players (
 );
 
 -- Optionally, uncomment the below query to create data
---INSERT INTO players (name, email) VALUES ('Alfreds Futterkiste', 'alfred@gmail.com'), ('Arnand Beetle', 'Arnand@gmail.com'), ('Bs Beverages', 'victoria@gmail.com'), ('Bs Beverages', 'Random Name');
+--INSERT INTO players (name, email) VALUES ('Alfreds Futterkiste', 'alfred@gmail.com'), ('Arnand Beetle', 'Arnand@gmail.com'), ('Bs Beverages', 'victoria@gmail.com');

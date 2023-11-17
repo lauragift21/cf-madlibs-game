@@ -2,13 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import StoryPicker from '../components/StoryPicker.astro';
 import GameInstructions from '../components/GameInstructions.astro';
+
 ---
 
 <Layout title='Cloudflare MadLibs Game'>
   <main>
     <h1>Cloudy<span class='text-gradient'> MadLibs Game</span></h1>
-    <!-- TODO: Add Player's name from DB! -->
-    <p>Hello, Player_Name!</p>
     <GameInstructions />
     <StoryPicker />
   </main>
