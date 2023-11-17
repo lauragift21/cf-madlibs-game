@@ -1,5 +1,12 @@
 # Cloudy MadLib Game
 
+Cloudy Madlibs is a fun, interactive game that revitalizes the classic word game experience with a tech-savvy twist. Aimed at both developers and word-game enthusiasts, this game invites players to craft hilarious and unexpected stories by filling in the blanks with their own words.
+
+## How to Play
+- Select a story template.
+- Choose your words and fill in the missing blanks.
+- Read and enjoy your unique, often hilarious creation.
+- Share your stories with friends or on social media.
 
 ### Running Locally
 
