@@ -1,7 +1,7 @@
 ---
 import StoryBuilder from '../../components/StoryBuilder.jsx'
 import Layout from '../../layouts/Layout.astro';
-import { stories } from '../api/stories.js';
+
 const id = Astro.params.id;
 const story = stories.find((story) => story.id === id);
 ---

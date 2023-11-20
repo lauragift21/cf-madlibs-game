@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from 'uuid'; 
 import styles from './Storybuilder.module.css';
 
 const StoryBuilder = ({ story }) => {
   const placeholders = story.content.match(/\[.*?\]/g) || [];
   const [inputValues, setInputValues] = useState(new Array(placeholders.length).fill(''));
   const [completedStory, setCompletedStory] = useState('');
+  const [buttonText, setButtonText] = useState('Share Story');
+  //TODO: Replace with custom id
+  const shareUrl = `/stories/${story.id}`;
 
   const formStyle = {
     backgroundColor: story.color,
@@ -32,6 +36,15 @@ const StoryBuilder = ({ story }) => {
     setCompletedStory(filledStory);
   };
 
+   const handleShare = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setButtonText('Copied!');
+      setTimeout(() => setButtonText('Copy Link'), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
   return (
     <div>
       <form className={styles.form} style={formStyle} onSubmit={handleSubmit}>
@@ -65,6 +78,7 @@ const StoryBuilder = ({ story }) => {
         )}
       </form>
       <a className={styles.backButton} href="/stories">Back</a>
+      {completedStory && <button style={formStyle} onClick={handleShare}>{buttonText}</button>}
     </div>
   );
 };

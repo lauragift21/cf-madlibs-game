@@ -1,11 +1,50 @@
 ---
-import { stories } from '../pages/api/stories.js';
 export interface Story {
   id: string;
   title: string;
   description: string;
   color: string;
 }
+
+const baseURL = Astro.url.origin;
+
+const response = await fetch(`${baseURL}/api/stories`);
+const text = await response.text();
+console.log('Response text:', text);
+
+try {
+  const storiess = JSON.parse(text);
+  console.log(storiess);
+} catch (error) {
+  console.error('Error parsing JSON:', error);
+}
+
+const stories = [
+  {
+     id: 'fullstack',
+    title: 'Fullstack for the Win',
+    description:
+      'When the software layers unite, a new hero rises in the world of code.',
+    color: '#007bff',
+    content: `After attending re:Invent, a group of [adjective] developers decided to build a full-stack serverless application with Cloudflare. Their goal was to create a(n) [adjective] application that would [verb] people's lives.`
+  },
+  {
+     id: 'fullstack',
+    title: 'Fullstack for the Win',
+    description:
+      'When the software layers unite, a new hero rises in the world of code.',
+    color: '#007bff',
+    content: `After attending re:Invent, a group of [adjective] developers decided to build a full-stack serverless application with Cloudflare. Their goal was to create a(n) [adjective] application that would [verb] people's lives.`
+  },
+  {
+     id: 'fullstack',
+    title: 'Fullstack for the Win',
+    description:
+      'When the software layers unite, a new hero rises in the world of code.',
+    color: '#007bff',
+    content: `After attending re:Invent, a group of [adjective] developers decided to build a full-stack serverless application with Cloudflare. Their goal was to create a(n) [adjective] application that would [verb] people's lives.`
+  }
+];
 ---
 
 <section>

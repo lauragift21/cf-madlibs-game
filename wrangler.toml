@@ -8,3 +8,8 @@ binding = "DB"
 database_name = "madlibs-db"
 database_id = "5c61ceec-f7ae-4f66-9272-efb7894f5171"
 preview_database_id = "DB"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "1493362eb5804ed4b0979015b3158cbf"
+preview_id = "b23534d136414859b1ab63988b7785bc"
