@@ -10,15 +10,25 @@ import Form from '../components/SignUpForm.astro';
       Are you ready to put your creativity to the test and have a blast while
       doing it?
       <br />
-      This zany game invites players to embark on a linguistic journey filled
+       This zany game invites players to embark on a linguistic journey filled
       with laughter, imagination, and <strong>Cloudflare's unique charm.</strong
       >
     </p>
     <Form />
     <footer>
+      <p class='callout'>
+        In submitting this form, you agree to receive information from
+        Cloudflare related to our products, events, and special offers. You can
+        unsubscribe from such messages at any time. We never sell your data, and
+        we value your privacy choices. Please see our <a
+          class='privacylink'
+          href='https://www.cloudflare.com/privacypolicy/'>Privacy Policy</a
+        > for information.
+      </p>
       <p class='footer'>
         Built with ❤️ on <a href='https://developers.cloudflare.com/workers'
-          >Cloudflare Workers</a>
+          >Cloudflare Workers</a
+        >
       </p>
     </footer>
   </main>
@@ -95,6 +105,15 @@ import Form from '../components/SignUpForm.astro';
   }
 
   .footer a {
+    color: rgb(var(--accent-light));
+  }
+
+  .callout {
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  .privacylink {
     color: rgb(var(--accent-light));
   }
 </style>
