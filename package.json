@@ -6,10 +6,10 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
     "astro": "astro",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-10-25 --d1=DB --kv=KV -- astro dev",
-    "pages:deploy": "astro build && wrangler pages deploy ./dist"
+    "pages:deploy": "astro build && wrangler pages deploy ./dist",
+    "preview": "wrangler pages dev --compatibility-date=2023-10-25 ./dist"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^7.6.3",
