@@ -26,6 +26,6 @@
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.6",
-    "wrangler": "^3.16.0"
+    "wrangler": "^3.17.0"
   }
 }

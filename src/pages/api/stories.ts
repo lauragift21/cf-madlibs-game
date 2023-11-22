@@ -1,4 +1,4 @@
-import type { APIContext, APIRoute } from "astro";
+import type { APIContext, APIRoute } from 'astro';
 
 export interface Env {
   KV: KVNamespace;
@@ -7,22 +7,24 @@ export interface Env {
 export const GET: APIRoute<Env> = async ({ locals }: APIContext) => {
   try {
     const env = locals.runtime.env;
-    const value = await env.KV.list();
-    console.log('Keys:', value.keys)
-    if (value.keys.length === 0) {
+    const values = await env.KV.list();
+
+    if (!values.keys || values.keys.length === 0) {
       return new Response('No keys found', { status: 404 });
     }
 
-    const promises = value.keys.map(async (key) => {
+    const promises = values.keys.map(async (key) => {
       const value = await env.KV.get(key.name);
       return value;
     });
 
-    const values = await Promise.all(promises);
-    return new Response(JSON.stringify(values));
-
+    const response = await Promise.all(promises);
+    return new Response(JSON.stringify(response), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
   } catch (error) {
-    console.error('POST request error', error);
-    return new Response(JSON.stringify(error));
+    console.error('GET request error', error);
+    return new Response(JSON.stringify(error), { status: 500 });
   }
 };

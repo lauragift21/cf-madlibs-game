@@ -2,8 +2,10 @@
 import StoryBuilder from '../../components/StoryBuilder.jsx'
 import Layout from '../../layouts/Layout.astro';
 
+const stories = Astro.props.stories;
+console.log(stories);
 const id = Astro.params.id;
-const story = stories.find((story) => story.id === id);
+const story = stories.find((story: { id: string | undefined; }) => story.id === id);
 ---
 
 <Layout title='Cloudflare MadLibs Game'>
