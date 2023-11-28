@@ -1,4 +1,6 @@
 ---
+import GitHubCorner from '../components/GitHubCorner.astro';
+
 interface Props {
 	title: string;
 }
@@ -17,6 +19,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+    <GitHubCorner />
 		<slot />
 	</body>
 </html>
